@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire Ecology</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="menu" id="menu">
+        <ul style="padding: 0px;">
+            <li style="padding-top: 0px; padding-bottom: 0px;">
+                <div class="searchbar">
+                <button class="searchbutton" onclick="checkfordisp()">
+                    <i class="fa-solid fa-magnifying-glass">🔍︎</i>
+                </button>
+                <input type="text" placeholder="search" class="searchmain" id="search">
+                <button class="searchbuttoncl" id="sbtn">
+                    Search
+                </button>
+            </div>
+            </li>
+        </ul>
+        <button class="invisbutton" onclick="togglemenuoff()"><a href="#home" style="color: white;">Home</a></button>
+        <button class="invisbutton" onclick="togglemenuoff()"><a href="#about" style="color: white;">About</a></button>
+        <button class="invisbutton" onclick="togglemenuoff()"><a href="#FAQ" style="color: white;">FAQs</a></button>
+    </div>
+    <div class="navbar">
+        
+        <div style="display: flex; justify-content: center; align-items: center;">
+        <ul style="padding: 0px;">
+            <li onclick="togglemenuon()" id="togmenu" style="cursor: pointer;">
+                <i class="fa-solid fa-bars">☰</i>
+            </li>
+        </ul>
+        <a href="#"><img src="img/logo.png" alt="logo" style="width:150px;"></a>
+        </div>
+        <ul>
+
+            <li id="homesec">
+
+                <a href="#home">Home</a>
+            </li>
+
+            <li id="aboutsec">
+
+                <a href="#about">About</a>
+            </li>
+
+            <li id="faqsec">
+
+                <a href="#FAQ">FAQ</a>
+            </li>
+        </ul>
+    </div>
+
+        <div class="home" id="home">
+            <p style="color: white; font-size: 40px; font-family: 'Times New Roman', Times, serif; font-weight: bold; margin: 20px;">Fire Ecology</p>
+            <p style="color: rgb(189, 187, 187); font-size: 18px; font-weight: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; text-align: center;">Understanding the Dynamic Relationship Between Flames and Nature.</p>
+        </div>
+
+        <div class="about" id="about">
+            <div>
+            <p class="aboutheading">About</p>
+
+            <p class="aboutdescription">Fire ecology explores the essential relationship between fire and ecosystems. Fire plays a crucial role in nutrient cycling, seed germination, and maintaining biodiversity. Some plant species even rely on fire for their growth and survival. Two main types of fires exist: prescribed fires (controlled burns) and wildfires. While both impact ecosystems differently, fire regimes - the patterns and characteristics of fires over time - are influenced by climate, vegetation, and topography. Fire suppression, once widespread, disrupt natural fire cycles, leading to larger, more intense wildfires. Today, fire management aims to balance ecosystem health and human safety.
+                Post-fire recovery is a critical phase where ecosystems regenerate and create opportunities for diverse plant communities. Fire ecology offers valuable insights into the multifaceted interactions between fire and ecosystems. Understanding its ecological role is essential for sustainable fire management, conservation, and restoration efforts. By recognizing fire as a natural force, we can better protect our landscapes and maintain the delicate balance between human safety and ecosystem health.</p>
+            
+            </div>
+            <p class="aboutdescription" style="flex-direction: column;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore, minus nesciunt unde ipsam vel natus cum similique est eligendi magni non, dicta ipsa esse necessitatibus laudantium expedita, omnis accusantium quam!</p>
+            <p style="margin: 20px; font-size: 20px;">for more, check out our <a href="#" style="color: rgb(0, 91, 237);">blog</a></p>
+        </div>
+        <div class="faqs" id="FAQ">
+            <p class="faqheading">FAQs</p>
+
+            <div class="centercontainer">
+
+            <div class="fqs" onclick="this.querySelector('.ans').style.display='block'" onmouseleave="this.querySelector('.ans').style.display='none'">
+            <p class="qs">Lorem ipsum?</p>
+            <p class="ans">dolor sit. amet.</p>
+            </div>
+
+            <div class="fqs" onclick="this.querySelector('.ans').style.display='block'" onmouseleave="this.querySelector('.ans').style.display='none'">
+            <p class="qs">itaque animi?</p>
+            <p class="ans">consectetur adipisicing elit.</p>
+            </div>            
+
+            <div class="fqs" onclick="this.querySelector('.ans').style.display='block'" onmouseleave="this.querySelector('.ans').style.display='none'">
+            <p class="qs">Lorem ipsum?</p>
+            <p class="ans">dolor sit. amet.</p>
+            </div>
+
+            <div class="fqs" onclick="this.querySelector('.ans').style.display='block'" onmouseleave="this.querySelector('.ans').style.display='none'">
+            <p class="qs">uo nam dolorem magni veritatis quibusdam voluptas placeat rerum tenetur provident</p>
+            <p class="ans">r adipisicing elit. Magnam repellat fuga odio corporis consequatur eos itaque animi cupiditate sunt. Quo nam dolorem ma</p>
+            </div>
+    
+            <div class="fqs" onclick="this.querySelector('.ans').style.display='block'" onmouseleave="this.querySelector('.ans').style.display='none'">
+            <p class="qs">Lorem ipsum?</p>
+            <p class="ans">dolor sit. amet.</p>
+            </div>            
+    
+            <div class="fqs" onclick="this.querySelector('.ans').style.display='block'" onmouseleave="this.querySelector('.ans').style.display='none'">
+            <p class="qs">Lorem ipsum?</p>
+            <p class="ans">dolor sit. amet.</p>
+            </div>
+            
+            <div class="fqs" onclick="this.querySelector('.ans').style.display='block'" onmouseleave="this.querySelector('.ans').style.display='none'">
+            <p class="qs">Lorem ipsum?</p>
+            <p class="ans">dolor sit. amet.</p>
+            </div>
+
+            </div>
+        </div>
+        <script src="https://kit.fontawesome.com/dacf4fa1ce.js" crossorigin="anonymous"></script>
+        <script>
+            function checkfordisp(){
+                sf = document.getElementById("search");
+                sbtn = document.getElementById("sbtn");
+                console.log(sf);
+                console.log(sbtn);
+
+                currentstyle = window.getComputedStyle(document.getElementById("search")).getPropertyValue("display");
+                homestyle = window.getComputedStyle(document.getElementById("homesec")).getPropertyValue("display");
+                aboutstyle = window.getComputedStyle(document.getElementById("aboutsec")).getPropertyValue("display");
+                faqstyle = window.getComputedStyle(document.getElementById("faqsec")).getPropertyValue("display");
+                
+                if(currentstyle == "none"){
+                    sf.style.display="block";
+                    sbtn.style.display="block";
+                }
+                else{
+                    sf.style.display="none";
+                    sbtn.style.display="none";
+                }
+            }
+
+            function togglemenuoff(){
+                menupos = window.getComputedStyle(document.getElementById("menu")).getPropertyValue("left");
+                menu = document.getElementById("menu");
+                mbtn = document.getElementById("togmenu");
+                menu.style.left = "-10000px";
+                mbtn.setAttribute("onclick", "togglemenuon()")
+            }
+            function togglemenuon(){
+                menupos = window.getComputedStyle(document.getElementById("menu")).getPropertyValue("left");
+                menu = document.getElementById("menu");
+                mbtn = document.getElementById("togmenu");
+                menu.style.left = "0px";
+                mbtn.setAttribute("onclick", "togglemenuoff()")
+            }
+        </script>
+</body>
+</html>
