@@ -61,6 +61,7 @@
             <p style="color: rgb(189, 187, 187); font-size: 18px; font-weight: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; text-align: center;">Understanding the Dynamic Relationship Between Flames and Nature.</p>
         </div>
 
+
         <div class="about" id="about">
             <div>
             <p class="aboutheading">About</p>
@@ -72,48 +73,51 @@
             <p class="aboutdescription" style="flex-direction: column;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore, minus nesciunt unde ipsam vel natus cum similique est eligendi magni non, dicta ipsa esse necessitatibus laudantium expedita, omnis accusantium quam!</p>
             <p style="margin: 20px; font-size: 20px;">for more, check out our <a href="#" style="color: rgb(0, 91, 237);">blog</a></p>
         </div>
-        <div class="faqs" id="FAQ">
-            <p class="faqheading">FAQs</p>
-
-            <div class="centercontainer">
-
-            <div class="fqs" onclick="this.querySelector('.ans').style.display='block'" onmouseleave="this.querySelector('.ans').style.display='none'">
-            <p class="qs">Lorem ipsum?</p>
-            <p class="ans">dolor sit. amet.</p>
-            </div>
-
-            <div class="fqs" onclick="this.querySelector('.ans').style.display='block'" onmouseleave="this.querySelector('.ans').style.display='none'">
-            <p class="qs">itaque animi?</p>
-            <p class="ans">consectetur adipisicing elit.</p>
-            </div>            
-
-            <div class="fqs" onclick="this.querySelector('.ans').style.display='block'" onmouseleave="this.querySelector('.ans').style.display='none'">
-            <p class="qs">Lorem ipsum?</p>
-            <p class="ans">dolor sit. amet.</p>
-            </div>
-
-            <div class="fqs" onclick="this.querySelector('.ans').style.display='block'" onmouseleave="this.querySelector('.ans').style.display='none'">
-            <p class="qs">uo nam dolorem magni veritatis quibusdam voluptas placeat rerum tenetur provident</p>
-            <p class="ans">r adipisicing elit. Magnam repellat fuga odio corporis consequatur eos itaque animi cupiditate sunt. Quo nam dolorem ma</p>
-            </div>
+        <section class="faqs">
+            <h2 class="title">FAQs</h2>
     
-            <div class="fqs" onclick="this.querySelector('.ans').style.display='block'" onmouseleave="this.querySelector('.ans').style.display='none'">
-            <p class="qs">Lorem ipsum?</p>
-            <p class="ans">dolor sit. amet.</p>
-            </div>            
-    
-            <div class="fqs" onclick="this.querySelector('.ans').style.display='block'" onmouseleave="this.querySelector('.ans').style.display='none'">
-            <p class="qs">Lorem ipsum?</p>
-            <p class="ans">dolor sit. amet.</p>
-            </div>
-            
-            <div class="fqs" onclick="this.querySelector('.ans').style.display='block'" onmouseleave="this.querySelector('.ans').style.display='none'">
-            <p class="qs">Lorem ipsum?</p>
-            <p class="ans">dolor sit. amet.</p>
-            </div>
+            <!--a single question is structured like this-->
 
-            </div>
-        </div>
+
+            <div class="faq"><!--a new set of q/a-->
+
+                <div class="question"><!--question-->
+                    <h3>What is jnjnds?</h3><!--the question-->
+
+                    <svg width="15" height="10" viewbox="0 0 42 25"><!--icon-->
+                        <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"></path><!--icon-->
+                    </svg><!--icon-->
+
+                </div><!--end of question-->
+
+                <div class="answer"><!--the answer-->
+                    <!--the answer--><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt, officiis vitae! Fuga, perspiciatis nobis incidunt aspernatur accusamus laboriosam iste expedita accusantium nulla, nostrum illo inventore soluta sequi sapiente nemo! Veniam?</p>
+                </div><!--end of answer-->
+
+            </div><!--end of one set of q/a-->
+
+
+            <!--end of this question-->
+
+            <div class="faq"><!--a new set of q/a-->
+
+                <div class="question"><!--question-->
+                    <h3>What is xxvc?</h3><!--the question-->
+
+                    <svg width="15" height="10" viewbox="0 0 42 25"><!--icon-->
+                        <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"></path><!--icon-->
+                    </svg><!--icon-->
+
+                </div><!--end of question-->
+
+                <div class="answer"><!--the answer-->
+                    <!--the answer--><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt, officiis vitae! Fuga, perspiciatis nobis incidunt aspernatur accusamus laboriosam iste expedita accusantium nulla, nostrum illo inventore soluta sequi sapiente nemo! Veniam?</p>
+                </div><!--end of answer-->
+
+            </div><!--end of one set of q/a-->
+            <!-- Add more FAQs here if needed -->
+    
+        </section>
         <script src="https://kit.fontawesome.com/dacf4fa1ce.js" crossorigin="anonymous"></script>
         <script>
             function checkfordisp(){
@@ -151,6 +155,26 @@
                 menu.style.left = "0px";
                 mbtn.setAttribute("onclick", "togglemenuoff()")
             }
+
+            const faqs = document.querySelectorAll(".faq");
+
+faqs.forEach((faq) => {
+    const question = faq.querySelector(".question");
+    const answer = faq.querySelector(".answer");
+
+    question.addEventListener("click", () => {
+        faq.classList.toggle("active");
+        const isActive = faq.classList.contains("active");
+
+        if (isActive) {
+            answer.style.maxHeight = answer.scrollHeight + "px";
+            question.querySelector("svg").style.transform = "rotate(180deg)";
+        } else {
+            answer.style.maxHeight = "0";
+            question.querySelector("svg").style.transform = "rotate(0deg)";
+        }
+    });
+});
         </script>
 </body>
 </html>
