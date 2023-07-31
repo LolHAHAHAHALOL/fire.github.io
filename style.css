@@ -34,10 +34,18 @@ li, a{
     color: #000000;
     font-weight: bold;
     display: inline-block;
-    padding: 10px;
+    padding: 5px 10px 5px 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition-duration: 0.32s;
+    border-radius: 5px;
+    background: transparent;
     
 }
+
+li:hover{
+    background: rgb(233, 76, 19);
+}
+
 div{
     scroll-snap-type: mandatory;
     scroll-snap-stop: always;
@@ -45,7 +53,7 @@ div{
 .home{
     width: 100%;
     min-height: 100%;
-    background-image: linear-gradient(rgb(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("img/firetrees.jpg");
+    background-image: linear-gradient(rgb(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("img/firetrees.jpg");
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -73,7 +81,7 @@ div{
 }
 .searchbutton{
     height: 100%;
-    padding: 11px;
+    padding: 1px;
     background-color: rgb(30, 30, 30);
     color: white;
     border: 0px solid;
@@ -90,11 +98,11 @@ div{
 .about{
     width: 100%;
     min-height: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("img/backgroundblack.png");
+    background-color: #e0e0e0;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    color: white;
+    color: rgb(0, 0, 0);
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -108,14 +116,15 @@ div{
 }
 .aboutdescription{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    white-space: pre-line;
     font-size: 20px;
     text-align: justify;
-    text-align-last: center;
-    color: rgb(180, 180, 180);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: rgb(26, 26, 26);
     margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .centercontainer{
@@ -132,7 +141,7 @@ div{
     min-width: 100%;
     position: fixed;
     transition-duration: 1s;
-    background-color: black;
+    background-color: #101010;
     color: white;
     left: -10000px;
     top: 60px;
@@ -156,6 +165,19 @@ body {
 	color: #fff;
 }
 
+.contact{
+
+    width: 100%;
+    min-height: 100%;
+    background-color: black;
+    color: white;
+    background-image: linear-gradient(rgb(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("img/telephone.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
 section{
 
 	min-height: 100vh;
@@ -172,6 +194,27 @@ section{
 	margin: 2rem 0rem;
 }
 
+b{  
+    margin: 20px;
+    margin-left: 0px;
+    text-align: left;
+    color: #000000;
+}
+
+.coptions{
+
+    background-color: rgb(15, 15, 15);
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.headingc{
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .faq {
 
 	max-width: 700px;
@@ -179,6 +222,7 @@ section{
 	padding-bottom: 1rem;
 	border-bottom: 2px solid #fff;
 	cursor:  pointer;
+    
 }
 
 .question{
@@ -241,12 +285,8 @@ svg{
 	}
 }
 
-
-@media (max-width: 836px) {
-    .searchmain{
-        display: none;
-    }
-    .searchbuttoncl{
+@media (max-width: 632px) {
+    #consec{
         display: none;
     }
 }
