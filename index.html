@@ -28,11 +28,11 @@
         <button class="invisbutton" onclick="togglemenuoff()"><a href="#FAQ" style="color: white;">FAQs</a></button>
         <button class="invisbutton" onclick="togglemenuoff()"><a href="#contact" style="color: white;">Contact</a></button>
     </div>
-    <div class="navbar">
+    <div class="navbar" id="navbar">
         
         <div style="display: flex; justify-content: center; align-items: center;">
         <ul style="padding: 0px;">
-            <li onclick="togglemenuon()" id="togmenu" style="cursor: pointer;">
+            <li onclick="togglemenuon()" id="togmenu">
                 <i class="fa-solid fa-bars">☰</i>
             </li>
         </ul>
@@ -61,7 +61,14 @@
             </li>
         </ul>
     </div>
+<button class="botbtn"><i class="fa-solid fa-message">bot</i></button>
+<div class="botdiv">
+<div class="info"><img src="img/agni.png" alt="agni, our bot (icon)" style="width: 40px; height: 40px; border-radius: 200px; margin: 10px;"><p style="margin: 10px;">Agni</p></div>
+<div class="msgarea">az</div>
+<div class="inparea">
 
+</div>
+</div>
         <div class="home" id="home">
             <p style="color: white; font-size: 40px; font-family: 'Times New Roman', Times, serif; font-weight: bold; margin: 20px;">Fire Ecology</p>
             <p style="color: rgb(189, 187, 187); font-size: 18px; font-weight: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; text-align: center;">Understanding the Dynamic Relationship Between Flames and Nature.</p>
@@ -275,6 +282,7 @@
         </section>
         <script src="https://kit.fontawesome.com/dacf4fa1ce.js" crossorigin="anonymous"></script>
         <script src="scripts.js"></script>
+        <script type="module" src="agni.js"></script>
 
 </body>
 </html>
