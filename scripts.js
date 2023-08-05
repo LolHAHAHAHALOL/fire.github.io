@@ -1,3 +1,18 @@
+navchange();
+
+window.addEventListener('scroll', navchange)
+function navchange(){
+const scrdist = 50;
+const scrpos = window.scrollY;
+if(scrpos > scrdist){
+  document.getElementById("navbar").style.backgroundColor = "rgba(172, 172, 172, 0.4)";
+  document.getElementById("navbar").style.color = "black";
+} else{
+  document.getElementById("navbar").style.backgroundColor = "rgba(172, 172, 172, 0)";
+  document.getElementById("navbar").style.color = "white";
+}
+}
+
 function checkfordisp() {
     sf = document.getElementById("searchbar");
     sbtn = document.getElementById("sbtn");
@@ -27,22 +42,20 @@ function checkfordisp() {
   }
 
   function togglemenuoff() {
-    menupos = window
-      .getComputedStyle(document.getElementById("menu"))
-      .getPropertyValue("left");
+    menupos = window.getComputedStyle(document.getElementById("menu")).getPropertyValue("left");
     menu = document.getElementById("menu");
     mbtn = document.getElementById("togmenu");
     menu.style.left = "-10000px";
     mbtn.setAttribute("onclick", "togglemenuon()");
+    document.body.style.overflowY = "auto";
   }
   function togglemenuon() {
-    menupos = window
-      .getComputedStyle(document.getElementById("menu"))
-      .getPropertyValue("left");
+    menupos = window.getComputedStyle(document.getElementById("menu")).getPropertyValue("left");
     menu = document.getElementById("menu");
     mbtn = document.getElementById("togmenu");
     menu.style.left = "0px";
     mbtn.setAttribute("onclick", "togglemenuoff()");
+    document.body.style.overflowY = "hidden";
   }
 
   const faqs = document.querySelectorAll(".faq");
